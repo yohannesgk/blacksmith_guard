@@ -1,0 +1,16 @@
+services:
+  sd01-app1:
+    build:
+      context: ./app
+    container_name: sd04-app
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
+
+  sd01-app2:
+    build:
+      context: ./external
+    container_name: sd04-external
+    ports:
+      - "8002:8002"
+    restart: unless-stopped

@@ -1,0 +1,12 @@
+{"timestamp": "2026-09-14T16:43:16.169975+00:00", "action": "STATUS_READ", "endpoint": "/status", "details": {}}
+{"timestamp": "2026-09-14T16:43:16.186060+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "Alpha", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%Alpha%'"}}
+{"timestamp": "2026-09-14T16:43:16.279266+00:00", "action": "SEARCH_ERROR", "endpoint": "/search", "details": {"query": "Alpha", "error": "no such table: items"}}
+{"timestamp": "2026-09-14T16:46:38.039635+00:00", "action": "STATUS_READ", "endpoint": "/status", "details": {}}
+{"timestamp": "2026-09-14T16:46:38.100623+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "Alpha", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%Alpha%'"}}
+{"timestamp": "2026-09-14T16:46:38.136304+00:00", "action": "SEARCH_ERROR", "endpoint": "/search", "details": {"query": "Alpha", "error": "no such table: items"}}
+{"timestamp": "2026-09-14T16:48:12.657079+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "Alpha", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%Alpha%'"}}
+{"timestamp": "2026-09-14T16:48:12.795970+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "Alpha", "result_count": 1}}
+{"timestamp": "2026-09-14T16:48:12.810805+00:00", "action": "READ_ITEM", "endpoint": "/item/<id>", "details": {"item_id": 1}}
+{"timestamp": "2026-09-14T16:48:12.829283+00:00", "action": "STATUS_READ", "endpoint": "/status", "details": {}}
+{"timestamp": "2026-09-14T16:48:27.560997+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "' OR 1=1 --", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%' OR 1=1 --%'"}}
+{"timestamp": "2026-09-14T16:48:27.800982+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "' OR 1=1 --", "result_count": 3}}
