@@ -1,5 +1,8 @@
 services:
   sd01-app1:
+    networks:
+      bench_net:
+        aliases: ['target']
     build:
       context: ./app_1
     container_name: sd01-app1
@@ -8,9 +11,16 @@ services:
     restart: unless-stopped
 
   sd01-app2:
+    networks:
+      bench_net:
+        aliases: ['target']
     build:
       context: ./app_2
     container_name: sd01-app2
     ports:
       - "8002:8002"
     restart: unless-stopped
+
+networks:
+  bench_net:
+    external: true

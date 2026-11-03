@@ -1,5 +1,8 @@
 services:
   target:
+    networks:
+      bench_net:
+        aliases: ['target']
     build: ./app
     ports:
       - "8000:8000"
@@ -10,3 +13,7 @@ services:
       interval: 5s
       timeout: 3s
       retries: 3
+
+networks:
+  bench_net:
+    external: true

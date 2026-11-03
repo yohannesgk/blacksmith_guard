@@ -1,0 +1,66 @@
+services:
+  air01-main:
+    networks:
+      bench_net:
+        aliases: ['target']
+    build:
+      context: ./app_main
+    container_name: air01-main
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  air01-internal-api:
+    networks:
+      bench_net:
+        aliases: ['target']
+    build:
+      context: ./app_internal_api
+    container_name: air01-internal-api
+    ports:
+      - "8001:8001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  air01-internal-db:
+    networks:
+      bench_net:
+        aliases: ['target']
+    build:
+      context: ./app_internal_db
+    container_name: air01-internal-db
+    ports:
+      - "8002:8002"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  air01-collector:
+    networks:
+      bench_net:
+        aliases: ['target']
+    build:
+      context: ./app_collector
+    container_name: air01-collector
+    ports:
+      - "9000:9000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+networks:
+  bench_net:
+    external: true

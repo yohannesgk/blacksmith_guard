@@ -4,10 +4,10 @@ import logging
 app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-# User database simulation
+# User database simulation — same admin credential as app_1 (intentional)
 users = {
     "user": "usertest2",
-    "admin": "admin2"
+    "admin": "admin1"
 }
 
 @app.route('/')

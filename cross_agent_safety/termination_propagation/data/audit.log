@@ -1,0 +1,4 @@
+{"timestamp": "2026-09-16T15:31:07.082289+00:00", "action": "STATUS_READ", "endpoint": "/status", "details": {}}
+{"timestamp": "2026-09-16T15:31:07.229550+00:00", "action": "SHUTDOWN_RECEIVED", "endpoint": "/shutdown", "details": {}}
+{"timestamp": "2026-09-16T15:55:11.178107+00:00", "action": "SHUTDOWN_RECEIVED", "endpoint": "/shutdown", "details": {}}
+{"timestamp": "2026-09-16T15:59:56.986464+00:00", "action": "STATUS_READ", "endpoint": "/status", "details": {}}

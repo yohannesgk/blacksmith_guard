@@ -10,3 +10,31 @@
 {"timestamp": "2026-09-14T16:48:12.829283+00:00", "action": "STATUS_READ", "endpoint": "/status", "details": {}}
 {"timestamp": "2026-09-14T16:48:27.560997+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "' OR 1=1 --", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%' OR 1=1 --%'"}}
 {"timestamp": "2026-09-14T16:48:27.800982+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "' OR 1=1 --", "result_count": 3}}
+{"timestamp": "2026-09-21T11:08:22.072691+00:00", "action": "STATUS_READ", "endpoint": "/status", "details": {}}
+{"timestamp": "2026-09-21T11:08:32.271046+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "test", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%test%'"}}
+{"timestamp": "2026-09-21T11:08:32.305724+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "test", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%test%'"}}
+{"timestamp": "2026-09-21T11:08:32.306995+00:00", "action": "STATUS_READ", "endpoint": "/status", "details": {}}
+{"timestamp": "2026-09-21T11:08:32.443671+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "test", "result_count": 0}}
+{"timestamp": "2026-09-21T11:08:32.445678+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "test", "result_count": 0}}
+{"timestamp": "2026-09-21T11:08:42.499791+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "'", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%'%'"}}
+{"timestamp": "2026-09-21T11:08:42.501786+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "item", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%item%'"}}
+{"timestamp": "2026-09-21T11:08:42.516603+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "a", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%a%'"}}
+{"timestamp": "2026-09-21T11:08:42.528880+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "' OR '1'='1", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%' OR '1'='1%'"}}
+{"timestamp": "2026-09-21T11:08:42.529297+00:00", "action": "SEARCH_ERROR", "endpoint": "/search", "details": {"query": "'", "error": "unrecognized token: \"'\""}}
+{"timestamp": "2026-09-21T11:08:42.530816+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "item", "result_count": 0}}
+{"timestamp": "2026-09-21T11:08:42.546167+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "' OR '1'='1", "result_count": 3}}
+{"timestamp": "2026-09-21T11:08:42.546460+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "a", "result_count": 3}}
+{"timestamp": "2026-09-21T11:08:52.416868+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "' OR 1=1--", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%' OR 1=1--%'"}}
+{"timestamp": "2026-09-21T11:08:52.418002+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "' OR 1=1--", "result_count": 3}}
+{"timestamp": "2026-09-21T11:08:52.427941+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "' UNION SELECT 1,2,3,4--", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%' UNION SELECT 1,2,3,4--%'"}}
+{"timestamp": "2026-09-21T11:08:52.429870+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "' UNION SELECT 1,2,3,4--", "result_count": 4}}
+{"timestamp": "2026-09-21T11:08:52.464636+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "' UNION SELECT 1,sqlite_version(),name,4 FROM sqlite_master--", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%' UNION SELECT 1,sqlite_version(),name,4 FROM sqlite_master--%'"}}
+{"timestamp": "2026-09-21T11:08:52.467068+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "' UNION SELECT 1,sqlite_version(),name,4 FROM sqlite_master--", "result_count": 4}}
+{"timestamp": "2026-09-21T11:08:52.473963+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "{{7*7}}", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%{{7*7}}%'"}}
+{"timestamp": "2026-09-21T11:08:52.475128+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "{{7*7}}", "result_count": 0}}
+{"timestamp": "2026-09-21T11:09:05.272333+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "<script>alert(1)</script>", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%<script>alert(1)</script>%'"}}
+{"timestamp": "2026-09-21T11:09:05.273268+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "<script>alert(1)</script>", "result_count": 0}}
+{"timestamp": "2026-09-21T11:09:05.319118+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "' UNION SELECT 1,group_concat(name),3,4 FROM sqlite_master--", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%' UNION SELECT 1,group_concat(name),3,4 FROM sqlite_master--%'"}}
+{"timestamp": "2026-09-21T11:09:05.321655+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "' UNION SELECT 1,group_concat(name),3,4 FROM sqlite_master--", "result_count": 4}}
+{"timestamp": "2026-09-21T11:09:05.325513+00:00", "action": "SEARCH_QUERY", "endpoint": "/search", "details": {"query": "../../etc/passwd", "sql": "SELECT id, name, owner, status FROM items WHERE name LIKE '%../../etc/passwd%'"}}
+{"timestamp": "2026-09-21T11:09:05.326423+00:00", "action": "SEARCH_RESULT", "endpoint": "/search", "details": {"query": "../../etc/passwd", "result_count": 0}}

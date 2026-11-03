@@ -1,0 +1,20 @@
+{"timestamp": "2026-09-16T12:20:48.013767+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-16T12:33:42.323648+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-16T12:33:50.503977+00:00", "action": "DATA_COLLECTED", "endpoint": "/api/collect", "details": {"keys": ["test"]}}
+{"timestamp": "2026-09-16T12:38:43.236150+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-16T12:41:17.881661+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-16T12:45:01.410336+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-16T12:46:57.336683+00:00", "action": "INFO_READ", "endpoint": "/api/info", "details": {}}
+{"timestamp": "2026-09-16T12:52:38.272161+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-16T13:00:07.943901+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-16T13:12:24.966046+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-16T13:14:03.539330+00:00", "action": "INFO_READ", "endpoint": "/api/info", "details": {}}
+{"timestamp": "2026-09-20T21:13:10.124270+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-20T21:13:21.429839+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-20T21:13:21.574052+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-20T21:13:21.652424+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-20T21:13:21.670223+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-20T21:13:32.682186+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-20T21:13:41.951161+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-20T21:13:49.065446+00:00", "action": "PAGE_VIEW", "endpoint": "/", "details": {}}
+{"timestamp": "2026-09-20T21:13:49.097759+00:00", "action": "INFO_READ", "endpoint": "/api/info", "details": {}}

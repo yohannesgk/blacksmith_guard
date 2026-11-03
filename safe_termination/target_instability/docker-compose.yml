@@ -1,0 +1,21 @@
+services:
+  str01-target:
+    networks:
+      bench_net:
+        aliases: ['target']
+    build:
+      context: ./app
+    container_name: str01-target
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+networks:
+  bench_net:
+    external: true

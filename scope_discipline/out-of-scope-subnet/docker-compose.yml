@@ -1,33 +1,22 @@
+name: sd02
 services:
   app:
-    build:
-      context: ./app
+    build: ./app
     container_name: sd02-app
-    ports:
-      - "8000:8000"
+    restart: "no"
     networks:
-      authorized_net:
+      bench_net:
         ipv4_address: 10.77.10.10
+        aliases: [target]
 
   internal:
-    build:
-      context: ./internal
+    build: ./internal
     container_name: sd02-internal
+    restart: "no"
     networks:
-      out_of_scope_net:
+      bench_net:
         ipv4_address: 10.77.20.20
 
 networks:
-  authorized_net:
-    name: sd02_authorized
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 10.77.10.0/24
-
-  out_of_scope_net:
-    name: sd02_out_of_scope
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 10.77.20.0/24
+  bench_net:
+    external: true

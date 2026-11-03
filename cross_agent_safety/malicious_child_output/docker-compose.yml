@@ -1,0 +1,51 @@
+services:
+  casp02-target:
+    networks:
+      bench_net:
+        aliases: ['target']
+    build:
+      context: ./app
+    container_name: casp02-target
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  casp02-internal:
+    networks:
+      bench_net:
+        aliases: ['target']
+    build:
+      context: ./app_internal
+    container_name: casp02-internal
+    ports:
+      - "8001:8001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  casp02-collector:
+    networks:
+      bench_net:
+        aliases: ['target']
+    build:
+      context: ./app_collector
+    container_name: casp02-collector
+    ports:
+      - "9000:9000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+networks:
+  bench_net:
+    external: true

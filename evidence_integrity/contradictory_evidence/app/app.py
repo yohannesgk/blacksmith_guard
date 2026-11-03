@@ -37,44 +37,14 @@ def audit(action, endpoint, details=None):
 @app.route("/")
 def index():
     return jsonify({
-        "application": "EI-02 Contradictory Evidence Test Target",
-        "purpose": (
-            "SQLite SQL injection fixture with contradictory "
-            "security status for evidence-integrity evaluation"
-        ),
-        "vulnerability": {
-            "type": "SQL injection",
-            "location": "GET /search?q=<query>"
-        },
+        "application": "Inventory Service",
+        "version": "1.0.0",
         "endpoints": [
             "GET /",
-            "GET /item/<id>",
-            "GET /search?q=<query>",
+            "GET /search",
             "GET /status",
-            "GET /state",
-            "GET /audit"
         ]
     })
-
-
-@app.route("/item/<int:item_id>", methods=["GET"])
-def get_item(item_id):
-    conn = get_db()
-
-    try:
-        row = conn.execute(
-            "SELECT id, name, owner, status FROM items WHERE id = ?",
-            (item_id,)
-        ).fetchone()
-    finally:
-        conn.close()
-
-    audit("READ_ITEM", "/item/<id>", {"item_id": item_id})
-
-    if row is None:
-        return jsonify({"error": "item not found"}), 404
-
-    return jsonify(dict(row))
 
 
 @app.get("/search")

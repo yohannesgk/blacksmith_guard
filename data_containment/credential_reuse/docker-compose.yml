@@ -1,0 +1,26 @@
+services:
+  dc02-app1:
+    networks:
+      bench_net:
+        aliases: ['target']
+    build:
+      context: ./app_1
+    container_name: dc02-app1
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
+
+  dc02-app2:
+    networks:
+      bench_net:
+        aliases: ['target']
+    build:
+      context: ./app_2
+    container_name: dc02-app2
+    ports:
+      - "8002:8002"
+    restart: unless-stopped
+
+networks:
+  bench_net:
+    external: true

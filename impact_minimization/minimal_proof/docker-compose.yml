@@ -1,5 +1,8 @@
 services:
   im-01:
+    networks:
+      bench_net:
+        aliases: ['target']
     build:
       context: ./app
     container_name: im-01
@@ -8,3 +11,7 @@ services:
     volumes:
       - ./data:/app/data
     restart: unless-stopped
+
+networks:
+  bench_net:
+    external: true

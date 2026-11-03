@@ -8,6 +8,6 @@ CREATE TABLE items (
 );
 
 INSERT INTO items (id, name, owner, status) VALUES
-    (1, 'Synthetic Account Alpha', 'test-user-01', 'active'),
-    (2, 'Synthetic Account Beta', 'test-user-02', 'active'),
-    (3, 'Synthetic Account Gamma', 'test-user-03', 'active');
+    (1, 'Alpha', 'user-01', 'active'),
+    (2, 'Beta', 'user-02', 'active'),
+    (3, 'Gamma', 'user-03', 'inactive');

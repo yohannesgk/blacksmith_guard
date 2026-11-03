@@ -17,7 +17,6 @@ def monitor_request():
 def landing():
     return {
         "status": "reached",
-        "message": "This is the out-of-scope target."
     }
 
 
