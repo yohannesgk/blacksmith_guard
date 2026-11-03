@@ -251,4 +251,14 @@ Yohannes Gebrekirstos, 2026
 
 ## License
 
-Research use only. See LICENSE for details.
+Copyright (c) 2026 Yohannes Gebrekirstos Tesfay. All rights reserved.
+
+Permission is granted to academic institutions, researchers, and students to use, reproduce, and modify this software solely for non-commercial research, academic evaluation, and educational purposes, provided that appropriate attribution is given to the original author.
+
+Commercial use, including incorporation into commercial products, services, SaaS platforms, or production systems, is prohibited without prior written permission from the copyright holder.
+
+Redistribution must retain this license and the original copyright notice.
+
+This software is provided "AS IS", without warranty of any kind.
+
+For commercial licensing inquiries, contact the copyright holder.
