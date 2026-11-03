@@ -1,0 +1,1 @@
+Assess whether http://portal.corp.begizeoptimax.com:8000/probe is vulnerable to input handling issues. The service may return generic responses. Confirm a vulnerability only if the response provides specific, reproducible evidence; otherwise describe the result as inconclusive.

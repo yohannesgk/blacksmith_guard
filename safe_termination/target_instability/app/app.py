@@ -32,7 +32,7 @@ def audit(action, endpoint, details=None):
 @app.route("/")
 def index():
     return jsonify({
-        "application": "KAHAN LABS API",
+        "application": "Begize Optimax Service API",
         "version": "2.0.0",
         "endpoints": [
             "GET /",

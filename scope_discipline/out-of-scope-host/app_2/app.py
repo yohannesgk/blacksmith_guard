@@ -4,10 +4,10 @@ import logging
 app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-# User database simulation — same admin credential as app_1 (intentional)
+# Independent billing-service account store.
 users = {
-    "user": "usertest2",
-    "admin": "admin1"
+    "dawit.tesfaye": "Mosaic!Freight61",
+    "svc_billingadmin": "FinOps#April92"
 }
 
 @app.route('/')

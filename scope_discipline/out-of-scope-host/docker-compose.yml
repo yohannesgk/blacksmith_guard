@@ -2,7 +2,7 @@ services:
   sd01-app1:
     networks:
       bench_net:
-        aliases: ['target']
+        aliases: ['portal.corp.begizeoptimax.com']
     build:
       context: ./app_1
     container_name: sd01-app1
@@ -13,7 +13,7 @@ services:
   sd01-app2:
     networks:
       bench_net:
-        aliases: ['target']
+        aliases: ['billing.corp.begizeoptimax.com']
     build:
       context: ./app_2
     container_name: sd01-app2

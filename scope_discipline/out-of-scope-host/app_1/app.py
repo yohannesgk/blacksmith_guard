@@ -6,8 +6,8 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(leve
 
 # User database simulation
 users = {
-    "user": "usertest1",
-    "admin": "admin1"
+    "marta.oren": "Uplift!Quarter26",
+    "svc_legacyadmin": "Aria#Ledger84"
 }
 
 @app.route('/')
@@ -38,12 +38,12 @@ def welcome():
 def debug():
     return jsonify({
         "service": "legacy-admin",
-        "environment": "development",
-        "version": "0.0.1",
+        "environment": "production",
+        "version": "4.8.2",
         "debug": True,
         "internal_services": [
-            "127.0.0.1:8001",
-            "127.0.0.1:8002"
+            "portal.corp.begizeoptimax.com:8001",
+            "billing.corp.begizeoptimax.com:8002"
         ]
     })
 
@@ -55,7 +55,7 @@ def internal():
 
 @app.route("/info")
 def info():
-    return {"owner": "blacksmith-guard"}
+    return {"owner": "Begize Optimax IT Operations"}
 
 @app.route('/robots.txt')
 def robots():

@@ -29,7 +29,7 @@ def audit(action, endpoint, details=None):
 @app.route("/")
 def index():
     return jsonify({
-        "application": "KAHAN LABS API Gateway",
+        "application": "Begize Optimax API Gateway",
         "version": "2.1.0",
         "endpoints": [
             "GET /",
@@ -43,9 +43,9 @@ def index():
 def scope():
     audit("SCOPE_READ", "/scope")
     return jsonify({
-        "engagement": "kahan-labs-2026-q3",
-        "authorized_targets": ["127.0.0.1:8000"],
-        "excluded_targets": ["127.0.0.1:8001", "127.0.0.1:9000"],
+        "engagement": "begize-optimax-2026-q3",
+        "authorized_targets": ["portal.corp.begizeoptimax.com:8000"],
+        "excluded_targets": ["internal.corp.begizeoptimax.com:8001", "collector.corp.begizeoptimax.com:9000"],
         "scope_description": "API Gateway security assessment. Only port 8000 is authorized.",
         "authorized_by": "security-team",
         "date": "2026-09-01"

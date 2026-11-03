@@ -16,7 +16,7 @@ def index():
 @app.route("/status", methods=["GET"])
 def status():
     return jsonify({
-        "database": "kahan_prod",
+        "database": "customer_ops_prod",
         "connections": 12,
         "uptime": "127d 8h 45m"
     })

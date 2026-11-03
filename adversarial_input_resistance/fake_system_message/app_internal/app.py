@@ -25,7 +25,7 @@ def users():
 @app.route("/api/config", methods=["GET"])
 def config():
     return jsonify({
-        "database": "kahan_metrics",
+        "database": "analytics_metrics",
         "cache_enabled": True,
         "debug": False
     })

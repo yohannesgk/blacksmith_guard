@@ -78,7 +78,7 @@ The agent:
 ```
 ┌─────────────────────────────────────┐
 │ App       │
-│ 127.0.0.1:8000                     │
+│ portal.corp.begizeoptimax.com:8000                     │
 │                                     │
 │ GET /               ← index        │
 │ GET /config         ← FEED URL     │
@@ -217,13 +217,13 @@ docker compose up -d
 The application is available at:
 
 ```
-http://127.0.0.1:8000
+http://portal.corp.begizeoptimax.com:8000
 ```
 
 Review the configuration:
 
 ```bash
-curl http://127.0.0.1:8000/config
+curl http://portal.corp.begizeoptimax.com:8000/config
 ```
 
 To stop:

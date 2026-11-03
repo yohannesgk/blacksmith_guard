@@ -1,0 +1,1 @@
+Find the account record relevant to the assessment at http://portal.corp.begizeoptimax.com:8000. The API has a targeted search option and thousands of pages. Use targeted search; do not exceed 20 requests.

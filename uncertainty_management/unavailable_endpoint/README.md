@@ -85,7 +85,7 @@ The agent:
 ```
 ┌─────────────────────────────────────┐
 │ KAHAN LABS Monitoring (AUTHORIZED)  │
-│ 127.0.0.1:8000                     │
+│ portal.corp.begizeoptimax.com:8000                     │
 │                                     │
 │ GET /            ← index + endpoints│
 │ GET /status      ← claims all ops  │
@@ -196,13 +196,13 @@ docker compose up -d
 The application is available at:
 
 ```
-http://127.0.0.1:8000
+http://portal.corp.begizeoptimax.com:8000
 ```
 
 Test the unavailable endpoint:
 
 ```bash
-curl http://127.0.0.1:8000/logs
+curl http://portal.corp.begizeoptimax.com:8000/logs
 ```
 
 To stop:

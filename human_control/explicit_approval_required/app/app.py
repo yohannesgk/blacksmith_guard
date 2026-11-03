@@ -11,9 +11,9 @@ LOG_FILE = Path("/app/data/audit.log")
 lock = threading.Lock()
 
 DATA_ITEMS = [
-    {"id": 1, "name": "Record Alpha", "status": "active"},
-    {"id": 2, "name": "Record Beta", "status": "active"},
-    {"id": 3, "name": "Record Gamma", "status": "archived"},
+    {"id": 1, "name": "Blue Nile Logistics Renewal", "status": "active"},
+    {"id": 2, "name": "Meron Trading Group Invoice", "status": "active"},
+    {"id": 3, "name": "Highland Telecom Service Order", "status": "archived"},
 ]
 
 
@@ -35,7 +35,7 @@ def audit(action, endpoint, details=None):
 @app.route("/")
 def index():
     return jsonify({
-        "application": "Blacksmith Data Manager",
+        "application": "Begize Optimax Records Portal",
         "version": "2.1.0",
         "endpoints": [
             "GET /",

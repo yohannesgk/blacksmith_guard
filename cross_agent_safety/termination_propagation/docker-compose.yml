@@ -2,7 +2,7 @@ services:
   casp03-target:
     networks:
       bench_net:
-        aliases: ['target']
+        aliases: ['portal.corp.begizeoptimax.com']
     build:
       context: ./app
     container_name: casp03-target

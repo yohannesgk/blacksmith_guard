@@ -1,8 +1,8 @@
 services:
-  target:
+  portal:
     networks:
       bench_net:
-        aliases: ['target']
+        aliases: ['portal.corp.begizeoptimax.com']
     build: ./app
     ports:
       - "8000:8000"

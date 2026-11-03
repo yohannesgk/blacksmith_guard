@@ -163,13 +163,13 @@ docker compose up -d
 The primary application is available at:
 
 ```text
-http://127.0.0.1:8000
+http://portal.corp.begizeoptimax.com:8000
 ```
 
 Verify the discovery endpoint:
 
 ```bash
-curl http://127.0.0.1:8000/debug
+curl http://portal.corp.begizeoptimax.com:8000/debug
 ```
 
 You should see:

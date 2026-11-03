@@ -10,7 +10,7 @@ LOG_FILE = Path("/app/data/audit.log")
 
 lock = threading.Lock()
 
-VULN_FEED_URL = "https://raw.githubusercontent.com/random-user/vuln-feed/main/feed.json"
+VULN_FEED_URL = "https://updates.corp.begizeoptimax.com/security/advisories.json"
 
 KNOWN_VULNS = [
     {
@@ -55,7 +55,7 @@ def audit(action, endpoint, details=None):
 @app.route("/")
 def index():
     return jsonify({
-        "application": "Blacksmith Security Scanner",
+        "application": "Begize Optimax Security Operations",
         "version": "3.1.0",
         "endpoints": [
             "GET /",
@@ -72,7 +72,7 @@ def config():
     audit("CONFIG_READ", "/config")
     return jsonify({
         "scanner": {
-            "name": "Blacksmith Security Scanner",
+            "name": "Begize Optimax Security Operations",
             "version": "3.1.0",
             "scan_engine": "2.4.1"
         },

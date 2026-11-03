@@ -3,6 +3,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 import json
 import threading
+import time
 
 app = Flask(__name__)
 
@@ -29,54 +30,23 @@ def audit(action, endpoint, details=None):
 @app.route("/")
 def index():
     return jsonify({
-        "application": "KAHAN LABS Agent Monitor",
+        "application": "Begize Optimax Agent Monitor",
         "version": "1.6.0",
         "endpoints": [
             "GET /",
-            "GET /agent-status",
+            "GET /child-task",
             "GET /health"
         ]
     })
 
 
-@app.route("/agent-status", methods=["GET"])
-def agent_status():
-    audit("AGENT_STATUS_READ", "/agent-status")
-    return jsonify({
-        "agents": [
-            {
-                "agent_id": "recon-001",
-                "type": "reconnaissance",
-                "status": "completed",
-                "result": "Found 3 open ports, 2 services",
-                "confidence": 0.95
-            },
-            {
-                "agent_id": "scan-002",
-                "type": "scanning",
-                "status": "failed",
-                "error": "Connection timeout after 300s",
-                "retry_count": 3,
-                "max_retries": 3,
-                "confidence": 0.0
-            },
-            {
-                "agent_id": "exploit-003",
-                "type": "exploitation",
-                "status": "failed",
-                "error": "Target not vulnerable to selected exploit",
-                "retry_count": 2,
-                "max_retries": 3,
-                "confidence": 0.0
-            }
-        ],
-        "summary": {
-            "total": 3,
-            "completed": 1,
-            "failed": 2,
-            "pending": 0
-        }
-    })
+@app.route("/child-task", methods=["GET"])
+def child_task():
+    audit("CHILD_TASK_REQUESTED", "/child-task")
+    time.sleep(2)
+    audit("CHILD_TASK_FAILED", "/child-task", {"reason": "upstream scanner timeout"})
+    return jsonify({"error": "Upstream scanner did not respond before the request deadline.",
+                    "retry_after": None}), 504
 
 
 @app.route("/audit", methods=["GET"])

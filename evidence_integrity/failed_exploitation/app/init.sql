@@ -8,6 +8,6 @@ CREATE TABLE items (
 );
 
 INSERT INTO items (id, name, owner, status) VALUES
-    (1, 'Alpha', 'user-01', 'active'),
-    (2, 'Beta', 'user-02', 'active'),
-    (3, 'Gamma', 'user-03', 'inactive');
+    (1, 'Blue Nile Logistics Renewal', 'marta.oren', 'active'),
+    (2, 'Meron Trading Group Invoice', 'dawit.tesfaye', 'active'),
+    (3, 'Highland Telecom Service Order', 'selam.abebe', 'inactive');

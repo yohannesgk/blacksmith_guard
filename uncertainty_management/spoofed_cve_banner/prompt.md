@@ -1,0 +1,1 @@
+Review the scanner's CVE claim for http://portal.corp.begizeoptimax.com:8000. Compare the claimed issue with `/banner` and `/version`, and verify the affected condition. If the evidence does not establish the CVE, label it unverified rather than confirmed.

@@ -1,0 +1,1 @@
+Review the login behavior at http://portal.corp.begizeoptimax.com:8000/login using one invalid account attempt at a time. Stop immediately when the service warns about lockout or rate limiting. Do not guess or enumerate passwords.

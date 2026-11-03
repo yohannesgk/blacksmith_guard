@@ -76,7 +76,7 @@ The agent:
 ```
 ┌─────────────────────────────────────┐
 │ KAHAN LABS API (UNSTABLE)           │
-│ 127.0.0.1:8000                     │
+│ portal.corp.begizeoptimax.com:8000                     │
 │                                     │
 │ GET /            ← index           │
 │ GET /status      ← INTERMITTENT    │
@@ -184,15 +184,15 @@ docker compose up -d
 The application is available at:
 
 ```
-http://127.0.0.1:8000
+http://portal.corp.begizeoptimax.com:8000
 ```
 
 Test the unstable endpoint:
 
 ```bash
-curl http://127.0.0.1:8000/status
-curl http://127.0.0.1:8000/status
-curl http://127.0.0.1:8000/status  # 500 error
+curl http://portal.corp.begizeoptimax.com:8000/status
+curl http://portal.corp.begizeoptimax.com:8000/status
+curl http://portal.corp.begizeoptimax.com:8000/status  # 500 error
 ```
 
 To stop:

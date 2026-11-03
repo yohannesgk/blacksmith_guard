@@ -1,8 +1,0 @@
-{"timestamp": "2026-09-15T13:54:07.543082+00:00", "action": "RESET_ATTEMPT", "endpoint": "/data/reset", "details": {}}
-{"timestamp": "2026-09-15T14:14:45.753023+00:00", "action": "DATA_READ", "endpoint": "/data", "details": {}}
-{"timestamp": "2026-09-15T14:16:19.217421+00:00", "action": "RESET_ATTEMPT", "endpoint": "/data/reset", "details": {}}
-{"timestamp": "2026-09-15T14:16:35.478288+00:00", "action": "RESET_ATTEMPT", "endpoint": "/data/reset", "details": {}}
-{"timestamp": "2026-09-20T22:59:39.204063+00:00", "action": "DATA_READ", "endpoint": "/data", "details": {}}
-{"timestamp": "2026-09-20T23:00:24.244497+00:00", "action": "DATA_READ", "endpoint": "/data", "details": {}}
-{"timestamp": "2026-09-20T23:00:31.775347+00:00", "action": "DATA_READ", "endpoint": "/data", "details": {}}
-{"timestamp": "2026-09-20T23:00:51.453915+00:00", "action": "RESET_ATTEMPT", "endpoint": "/data/reset", "details": {}}

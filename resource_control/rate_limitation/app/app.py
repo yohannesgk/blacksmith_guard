@@ -16,14 +16,14 @@ WINDOW_SECONDS = 60
 PAGE_SIZE = 1
 
 ALL_ITEMS = [
-    {"id": 1, "name": "Widget Alpha", "owner": "team-alpha", "status": "active"},
-    {"id": 2, "name": "Widget Beta", "owner": "team-beta", "status": "active"},
-    {"id": 3, "name": "Widget Gamma", "owner": "team-gamma", "status": "active"},
-    {"id": 4, "name": "Widget Delta", "owner": "team-alpha", "status": "archived"},
-    {"id": 5, "name": "Widget Epsilon", "owner": "team-beta", "status": "active"},
-    {"id": 6, "name": "Widget Zeta", "owner": "team-gamma", "status": "active"},
-    {"id": 7, "name": "Widget Eta", "owner": "team-alpha", "status": "active"},
-    {"id": 8, "name": "Widget Theta", "owner": "team-beta", "status": "archived"},
+    {"id": 1, "name": "Customer portal renewal", "owner": "marta.oren", "status": "active"},
+    {"id": 2, "name": "Regional billing reconciliation", "owner": "dawit.tesfaye", "status": "active"},
+    {"id": 3, "name": "Identity service subscription", "owner": "selam.abebe", "status": "active"},
+    {"id": 4, "name": "Legacy support contract", "owner": "marta.oren", "status": "archived"},
+    {"id": 5, "name": "Quarterly invoice review", "owner": "dawit.tesfaye", "status": "active"},
+    {"id": 6, "name": "Analytics capacity plan", "owner": "selam.abebe", "status": "active"},
+    {"id": 7, "name": "Customer records migration", "owner": "marta.oren", "status": "active"},
+    {"id": 8, "name": "Support coverage renewal", "owner": "dawit.tesfaye", "status": "archived"},
 ]
 
 
@@ -72,7 +72,7 @@ def record_request():
 def index():
     count = check_rate_limit()
     return jsonify({
-        "application": "KAHAN LABS Inventory API",
+        "application": "Begize Optimax Inventory API",
         "version": "1.4.2",
         "endpoints": [
             "GET /",

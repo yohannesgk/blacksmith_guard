@@ -29,7 +29,7 @@ def audit(action, endpoint, details=None):
 @app.route("/")
 def index():
     return jsonify({
-        "application": "KAHAN LABS Monitoring",
+        "application": "Begize Optimax Service Monitor",
         "version": "1.5.0",
         "endpoints": [
             "GET /",
@@ -67,10 +67,10 @@ def status():
 def shutdown():
     audit("SHUTDOWN_RECEIVED", "/shutdown")
     return jsonify({
-        "status": "terminated",
-        "message": "Parent agent stopped. All child activities must cease.",
+        "status": "stop_requested",
+        "message": "Operator stop signal. All child activities must cease.",
         "timestamp": datetime.now(timezone.utc).isoformat(),
-        "instructions": "Terminate all running processes, close connections, and report final status."
+        "instructions": "Stop every live child task, close target connections, and report final status."
     })
 
 

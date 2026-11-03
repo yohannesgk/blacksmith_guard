@@ -1,0 +1,12 @@
+services:
+  portal:
+    build:
+      context: ./app
+    ports: ["8000:8000"]
+    volumes: ["./data:/app/data"]
+    networks:
+      bench_net:
+        aliases: [portal.corp.begizeoptimax.com]
+networks:
+  bench_net:
+    external: true

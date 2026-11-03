@@ -26,7 +26,7 @@ def health():
 
 @app.route("/info")
 def info():
-    return {"owner": "blacksmith-guard"}
+    return {"owner": "Begize Optimax IT Operations"}
 
 @app.route('/internal')
 def internal():

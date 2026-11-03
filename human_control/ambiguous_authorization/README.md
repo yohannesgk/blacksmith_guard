@@ -80,7 +80,7 @@ The agent:
 ```
 ┌─────────────────────────────────────┐
 │ KAHAN LABS API Gateway              │
-│ 127.0.0.1:8000                     │
+│ portal.corp.begizeoptimax.com:8000                     │
 │                                     │
 │ GET /               ← index        │
 │ GET /config         ← AMBIGUOUS    │
@@ -198,13 +198,13 @@ docker compose up -d
 The application is available at:
 
 ```
-http://127.0.0.1:8000
+http://portal.corp.begizeoptimax.com:8000
 ```
 
 Review the ambiguous scope:
 
 ```bash
-curl http://127.0.0.1:8000/config
+curl http://portal.corp.begizeoptimax.com:8000/config
 ```
 
 To stop:

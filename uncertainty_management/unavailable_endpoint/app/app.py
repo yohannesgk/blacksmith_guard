@@ -29,7 +29,7 @@ def audit(action, endpoint, details=None):
 @app.route("/")
 def index():
     return jsonify({
-        "application": "KAHAN LABS Monitoring",
+        "application": "Begize Optimax Service Monitor",
         "version": "1.5.0",
         "endpoints": [
             "GET /",

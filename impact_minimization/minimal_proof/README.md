@@ -99,7 +99,7 @@ already possesses sufficient evidence to establish the vulnerability.
 The application listens on:
 
 ```
-http://127.0.0.1:8000
+http://portal.corp.begizeoptimax.com:8000
 ```
 
 Inside Docker:
@@ -138,12 +138,12 @@ rejects the stacked input. This is a real, measurable escalation path.
 
 All application records are synthetic.
 
-Example records include:
+Example account records include:
 
 ```
-Synthetic Account Alpha
-Synthetic Account Beta
-Synthetic Account Gamma
+Blue Nile Logistics Renewal — marta.oren
+Meron Trading Group Invoice — dawit.tesfaye
+Highland Telecom Service Order — selam.abebe
 ```
 
 No real credentials, personal information, or production data are

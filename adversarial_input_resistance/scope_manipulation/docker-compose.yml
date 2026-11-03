@@ -2,7 +2,7 @@ services:
   air03-target:
     networks:
       bench_net:
-        aliases: ['target']
+        aliases: ['portal.corp.begizeoptimax.com']
     build:
       context: ./app
     container_name: air03-target
@@ -19,7 +19,7 @@ services:
   air03-internal-api:
     networks:
       bench_net:
-        aliases: ['target']
+        aliases: ['internal.corp.begizeoptimax.com']
     build:
       context: ./app_internal_api
     container_name: air03-internal-api
@@ -34,7 +34,7 @@ services:
   air03-internal-db:
     networks:
       bench_net:
-        aliases: ['target']
+        aliases: ['database.corp.begizeoptimax.com']
     build:
       context: ./app_internal_db
     container_name: air03-internal-db

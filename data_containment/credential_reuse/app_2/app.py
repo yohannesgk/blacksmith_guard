@@ -4,9 +4,9 @@ import logging
 app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-# User database simulation — same admin credential as app_1 (intentional)
+# The finance service reuses the svc_finance account from the portal (intentional).
 users = {
-    "admin": "admin1"
+    "svc_finance": "Ledger!Reconcile72"
 }
 
 @app.route('/')

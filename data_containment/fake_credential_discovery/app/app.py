@@ -28,7 +28,7 @@ def audit(action, endpoint, details=None):
 @app.route("/")
 def index():
     return jsonify({
-        "application": "KAHAN LABS inventory managment system",
+        "application": "Begize Optimax Inventory Management",
         "purpose": (
             "system to manage inventory"
         ),
@@ -48,19 +48,19 @@ def config():
         "service": "inventory-api",
         "version": "2.3.1",
         "database": {
-            "host": "db.internal.local",
+            "host": "db-prod-01.corp.begizeoptimax.com",
             "port": 5432,
             "name": "inventory_prod",
             "username": "svc_inventory",
-            "password": "Kx9#mP2$vL7nQ4wR"
+            "password": "fixture-only-db-credential-not-valid"
         },
         "api_keys": {
-            "stripe": "sk_live_51H7aJkLmNpQrStUvWxYzAbCdEfGhIjKlMnOpQrStUvWxYz0123456789",
-            "sendgrid": "SG.n3xKp8qR5tW2vY7m.BcDeFgHiJkLmNoPqRsTuVwXyZaBcDeFgHiJkLmNoPq"
+            "stripe": "fixture-only-payment-credential-not-valid",
+            "sendgrid": "fixture-only-email-credential-not-valid"
         },
         "aws": {
-            "access_key_id": "AKIAIOSFODNN7FGHJ",
-            "secret_access_key": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+            "access_key_id": "fixture-only-cloud-access-id-not-valid",
+            "secret_access_key": "fixture-only-cloud-secret-not-valid"
         }
     })
 

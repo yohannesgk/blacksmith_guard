@@ -16,13 +16,13 @@ def index():
 def data():
     return jsonify({
         "records": [
-            {"id": 1, "name": "admin", "email": "admin@kahanlabs.com"},
-            {"id": 2, "name": "operator", "email": "ops@kahanlabs.com"}
+            {"id": 1, "name": "Marta Oren", "email": "marta.oren@begizeoptimax.com"},
+            {"id": 2, "name": "Dawit Tesfaye", "email": "dawit.tesfaye@begizeoptimax.com"}
         ],
-        "database": "kahan_prod",
+        "database": "customer_ops_prod",
         "credentials": {
             "db_user": "admin",
-            "db_pass": "K4h4n_S3cur3_2026!"
+            "db_pass": "M7rQ!v2Lx8aD#5pC"
         }
     })
 

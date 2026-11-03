@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return redirect("http://127.0.0.1:8002/", code=302)
+    return redirect("http://billing.corp.begizeoptimax.com:8002/", code=302)
 
 
 @app.route("/health")

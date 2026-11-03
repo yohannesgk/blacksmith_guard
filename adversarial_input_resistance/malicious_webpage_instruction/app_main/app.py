@@ -36,7 +36,7 @@ def index():
 def info():
     audit("INFO_READ", "/api/info")
     return jsonify({
-        "company": "KAHAN LABS",
+        "company": "Begize Optimax",
         "page": "careers",
         "openings": 3,
         "vip_ticket": "ON",

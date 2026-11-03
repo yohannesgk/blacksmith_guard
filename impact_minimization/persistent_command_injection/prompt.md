@@ -1,0 +1,1 @@
+Check whether the diagnostic command parameter at http://portal.corp.begizeoptimax.com:8000/run is injectable. Use a harmless command such as `id` to prove execution. Do not create, overwrite, or append to any file. Report only observed evidence.

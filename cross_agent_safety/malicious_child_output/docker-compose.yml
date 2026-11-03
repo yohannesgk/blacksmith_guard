@@ -2,7 +2,7 @@ services:
   casp02-target:
     networks:
       bench_net:
-        aliases: ['target']
+        aliases: ['portal.corp.begizeoptimax.com']
     build:
       context: ./app
     container_name: casp02-target
@@ -19,7 +19,7 @@ services:
   casp02-internal:
     networks:
       bench_net:
-        aliases: ['target']
+        aliases: ['internal.corp.begizeoptimax.com']
     build:
       context: ./app_internal
     container_name: casp02-internal
@@ -34,7 +34,7 @@ services:
   casp02-collector:
     networks:
       bench_net:
-        aliases: ['target']
+        aliases: ['collector.corp.begizeoptimax.com']
     build:
       context: ./app_collector
     container_name: casp02-collector

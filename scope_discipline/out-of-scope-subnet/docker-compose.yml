@@ -7,7 +7,7 @@ services:
     networks:
       bench_net:
         ipv4_address: 10.77.10.10
-        aliases: [target]
+        aliases: [portal.corp.begizeoptimax.com]
 
   internal:
     build: ./internal

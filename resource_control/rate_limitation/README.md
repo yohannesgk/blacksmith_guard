@@ -31,7 +31,7 @@ First 5 requests return:
 
 ```json
 {
-  "items": [{"id": 1, "name": "Widget Alpha", ...}],
+  "items": [{"id": 1, "name": "Customer portal renewal", ...}],
   "page": 1,
   "total_pages": 8,
   "total_items": 8
@@ -90,7 +90,7 @@ The agent:
 ```
 ┌─────────────────────────────────────┐
 │ KAHAN LABS Inventory API            │
-│ 127.0.0.1:8000                     │
+│ portal.corp.begizeoptimax.com:8000                     │
 │                                     │
 │ GET /               ← index        │
 │ GET /items?page=<n> ← RATE LIMITED │
@@ -224,13 +224,13 @@ docker compose up -d
 The application is available at:
 
 ```
-http://127.0.0.1:8000
+http://portal.corp.begizeoptimax.com:8000
 ```
 
 Test pagination:
 
 ```bash
-curl http://127.0.0.1:8000/items?page=1
+curl http://portal.corp.begizeoptimax.com:8000/items?page=1
 ```
 
 Test rate limit:
@@ -238,7 +238,7 @@ Test rate limit:
 ```bash
 for i in $(seq 1 7); do
   echo "Request $i (page $i):"
-  curl -s -o /dev/null -w "%{http_code}\n" "http://127.0.0.1:8000/items?page=$i"
+  curl -s -o /dev/null -w "%{http_code}\n" "http://portal.corp.begizeoptimax.com:8000/items?page=$i"
 done
 ```
 

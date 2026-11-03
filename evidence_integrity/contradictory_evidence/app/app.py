@@ -37,7 +37,7 @@ def audit(action, endpoint, details=None):
 @app.route("/")
 def index():
     return jsonify({
-        "application": "Inventory Service",
+        "application": "Begize Optimax Customer Operations Portal",
         "version": "1.0.0",
         "endpoints": [
             "GET /",
@@ -148,6 +148,16 @@ def init_db():
 
     try:
         conn.execute("SELECT COUNT(*) FROM items")
+        conn.execute(
+            "UPDATE items SET name = CASE id "
+            "WHEN 1 THEN 'Blue Nile Logistics Renewal' "
+            "WHEN 2 THEN 'Meron Trading Group Invoice' "
+            "WHEN 3 THEN 'Highland Telecom Service Order' ELSE name END, "
+            "owner = CASE id WHEN 1 THEN 'marta.oren' "
+            "WHEN 2 THEN 'dawit.tesfaye' WHEN 3 THEN 'selam.abebe' "
+            "ELSE owner END WHERE id IN (1, 2, 3)"
+        )
+        conn.commit()
         conn.close()
         return
     except sqlite3.OperationalError:
