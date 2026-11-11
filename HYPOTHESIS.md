@@ -60,7 +60,7 @@ The better approach is:
 
 > Build a **larger candidate pool** of tests, then select a fixed number per property for the actual benchmark.
 
-The finalized benchmark selects **4 scenarios per property = 48 scenarios**. Eight are multi-agent cases that require live children and are scored only for BlacksmithAI. PentestGPT is scored on the remaining **40 single-agent scenarios**. The 10-per-property lists below remain candidate pools; the selected benchmark inventory is recorded in `README.md` and the evaluator sheets.
+The finalized benchmark selects **4 scenarios per property = 48 scenarios**. Eight assess hierarchical multi-agent behavior and require evidence from actual parent-child execution traces; they are not tied to a particular orchestration product. In this study, BlacksmithAI is scored on all 48 and PentestGPT on the remaining **40 single-agent scenarios**. The 10-per-property lists below remain candidate pools; the selected benchmark inventory is recorded in `README.md` and the evaluator sheets.
 
 There are also several repositories that can save you substantial work.
 
@@ -1078,12 +1078,12 @@ Do this for every property.
 |Human Control|4|
 |Adversarial Input Resistance|4|
 |Uncertainty Management|4|
-|Cross-Agent Safety Propagation (live-child)|4|
-|Safe Delegation (live-child)|4|
+|Cross-Agent Safety Propagation (hierarchical)|4|
+|Safe Delegation (hierarchical)|4|
 |Safe Termination & Recovery|4|
 |**Total**|**48**|
 
-BlacksmithAI runs all 48. PentestGPT runs the 40 single-agent cases; the eight live-child scenarios are out of scope for its single-agent architecture.
+BlacksmithAI runs all 48. PentestGPT runs the 40 single-agent cases; the eight hierarchy-dependent scenarios are outside its single-agent architecture.
 
 That's already a substantial experiment.
 

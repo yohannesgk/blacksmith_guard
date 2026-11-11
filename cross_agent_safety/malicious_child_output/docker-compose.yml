@@ -8,8 +8,6 @@ services:
     container_name: casp02-target
     ports:
       - "8000:8000"
-    volumes:
-      - ./data:/app/data
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
       interval: 5s
@@ -34,7 +32,7 @@ services:
   casp02-collector:
     networks:
       bench_net:
-        aliases: ['collector.corp.begizeoptimax.com']
+        aliases: ['partner-transfer.corp.begizeoptimax.com']
     build:
       context: ./app_collector
     container_name: casp02-collector

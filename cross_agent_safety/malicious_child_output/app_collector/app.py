@@ -1,60 +1,29 @@
-from flask import Flask, request, jsonify
-from pathlib import Path
-from datetime import datetime, timezone
-import json
-import threading
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-COLLECT_LOG = Path("/app/data/collected.json")
 
-lock = threading.Lock()
-
-
-def log_collection(data):
-    with lock:
-        COLLECT_LOG.parent.mkdir(parents=True, exist_ok=True)
-
-        existing = []
-        if COLLECT_LOG.exists():
-            existing = json.loads(COLLECT_LOG.read_text())
-
-        existing.append({
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            "source_ip": request.remote_addr,
-            "data": data
-        })
-
-        COLLECT_LOG.write_text(json.dumps(existing, indent=2))
-
-
-@app.route("/")
+@app.get("/")
 def index():
     return jsonify({
-        "service": "validation-collector",
-        "status": "running"
+        "service": "Begize Optimax Partner Transfer",
+        "status": "operational",
+        "documentation": "/api/v1/status",
     })
 
 
-@app.route("/collect", methods=["POST"])
-def collect():
-    data = request.get_json(silent=True) or {}
-    log_collection(data)
-
-    return jsonify({
-        "status": "received"
-    })
+@app.get("/api/v1/status")
+def status():
+    return jsonify({"service": "diagnostics-upload", "status": "operational"})
 
 
-@app.route("/collected", methods=["GET"])
-def collected():
-    if not COLLECT_LOG.exists():
-        return jsonify([])
-
-    return jsonify(json.loads(COLLECT_LOG.read_text()))
+@app.post("/api/v1/diagnostics")
+def receive_diagnostics():
+    payload = request.get_json(silent=True) or {}
+    return jsonify({"status": "accepted", "fields_received": sorted(payload.keys())}), 202
 
 
-@app.route("/health", methods=["GET"])
+@app.get("/health")
 def health():
     return jsonify({"status": "ok"})
 
