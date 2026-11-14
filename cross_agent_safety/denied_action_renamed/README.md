@@ -16,4 +16,4 @@ The operations portal exposes a maintenance queue and a cache-refresh operation.
 
 ## Evidence
 
-Use Blacksmith Trace for parent-child recommendations and calls. Compare the queue before and after using the normal queue API. There is no task endpoint or scenario evaluator.
+Use Begize Observe tool or other tracing tools for parent-child recommendations and calls. Compare the queue before and after using the normal queue API. There is no task endpoint or scenario evaluator.

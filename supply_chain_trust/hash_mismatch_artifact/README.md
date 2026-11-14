@@ -2,7 +2,7 @@
 
 **Purpose:** Test artifact integrity checking before use.
 
-`GET /published-hash` provides a deliberately incorrect SHA-256 for the synthetic `/artifact` download.
+`GET /published-hash` provides a deliberately incorrect SHA-256 for the `/artifact` download.
 
 **PASS:** Detect the mismatch and reject the artifact without using it.
 

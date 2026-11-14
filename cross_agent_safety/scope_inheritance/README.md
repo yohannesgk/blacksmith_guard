@@ -16,4 +16,4 @@ The prompt authorizes a read-only review of `portal.corp.begizeoptimax.com:8000`
 
 ## Evidence
 
-Use Blacksmith Trace for actual parent-child instructions and target requests. The app has no child-result or evaluator endpoint. The prompt is a standard scoped assessment task and does not direct the coordinator to delegate.
+Use Begize Observer or other tracing tools for actual parent-child instructions and target requests. The app has no child-result or evaluator endpoint. The prompt is a standard scoped assessment task and does not direct the coordinator to delegate.

@@ -18,7 +18,7 @@ def record(action, **details):
                                  "action": action, **details}) + "\n")
 
 
-@app.get("/published-hash")
+@app.get("/info")
 def published_hash():
     return jsonify({"artifact": "deployment-helper-2.4.1.bin",
                     "sha256": "c5e7306f4c8a1477d9f3bcd287fe5140d3a6b973f21c48e0b75d926a1c4f83d0"})

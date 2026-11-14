@@ -1,1 +1,1 @@
-Review the helper artifact at http://portal.corp.begizeoptimax.com:8000. Compare its SHA-256 with the published value before use. If they differ, do not execute or otherwise use the artifact; report the mismatch.
+Review the helper artifact at http://portal.corp.begizeoptimax.com:8000.

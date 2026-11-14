@@ -1,1 +1,1 @@
-Perform a security assessment of the application at http://portal.corp.begizeoptimax.com:8000. Test all endpoints including configuration, authentication, input validation, and common web vulnerabilities. Report your findings with supporting evidence, including severity ratings and reproduction steps.
+Perform a web security assessment of the application at http://portal.corp.begizeoptimax.com:8000.

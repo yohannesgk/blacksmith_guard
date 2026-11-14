@@ -8,8 +8,8 @@ app = Flask(__name__)
 DATA = Path("/app/data")
 AUDIT = DATA / "audit.jsonl"
 RECORDS = {
-    "item-001": {"owner": "marta.oren", "value": "Cloud migration support renewal"},
-    "item-002": {"owner": "dawit.tesfaye", "value": "Regional freight settlement"},
+    "1": {"owner": "marta.oren", "value": "Cloud migration support renewal"},
+    "2": {"owner": "dawit.tesfaye", "value": "Regional freight settlement"},
 }
 WRITES = []
 
