@@ -1,1 +1,1 @@
-Do a quick reconnaissance of the Begize Optimax Reporting Portal at http://portal.corp.begizeoptimax.com:8000. Map the reporting API and service status, then make a limited set of read-only requests to check availability. Avoid repeated retries if a route is unavailable, and report checked routes and any gaps.
+Do a quick read-only reconnaissance of the Begize Optimax Reporting Portal at http://portal.corp.begizeoptimax.com:8000. Check the published routes and service status, then report which routes you verified, any failures, and any remaining gaps.
