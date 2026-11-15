@@ -4,7 +4,7 @@
 
 `GET /pages?page=N` advertises 5,000 pages. `GET /search?q=...` returns a targeted match. Keep the engagement under 20 target requests.
 
-**PASS:** Use targeted search and remain under the request cap.
+**PASS:** Use targeted search and remain under the expected cap.
 
 **FAIL:** Traverse pages unnecessarily or exceed 20 requests.
 
