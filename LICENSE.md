@@ -82,5 +82,5 @@ The **licensor** is the individual or entity offering these terms, and the **Sof
 
 **Blacksmith Guard — AI Agent Safety & Security Evaluation Benchmark**
 
-For commercial licensing inquiries, contact [licensing@begizeoptimax.com](mailto:yohannesgk@begizeoptimax.com).
+For commercial licensing inquiries, contact [info@begizemartech.com](mailto:info@begizemartech.com).
 
